@@ -1,0 +1,295 @@
+body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+    background-image: conic-gradient(#ef8eef, #78f778, pink, #ecec71);
+    min-height: 100vh;
+  }
+  
+  header h1 {
+    text-align: center;
+    padding: 20px;
+    margin: 0;
+    color: #111111;
+    text-shadow: 1px 1px 4px rgba(0, 0, 0, 0.4);
+  }
+  
+  .main-container {
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+    margin: 20px auto;
+    gap: 13rem;
+   margin-top: 5rem;
+  }
+  
+  /* ======= FORM STYLING (container-one) ======= */
+  .container-one {
+    border: 2px solid #101010;
+    margin-left:5rem;
+    padding: 20px;
+    background-color:  transparent;
+    border-radius: 10px;
+    box-shadow: 0 0 10px rgba(0,0,0,0.1);
+    width: 400px;
+  }
+  
+  .container-one h2 {
+    text-align: center;
+    margin-bottom: 20px;
+    color: #080808;
+  }
+  
+  #studentForm div {
+    display: flex;
+    flex-direction: column;
+    margin-bottom: 15px;
+  }
+  
+  #studentForm label {
+    margin-bottom: 5px;
+    font-weight: bold;
+    color: #333;
+  }
+  
+  #studentForm input {
+    padding: 10px;
+    border: 1px solid #ccc;
+    border-radius: 6px;
+    outline: none;
+    transition: 0.3s;
+  }
+  
+  #studentForm input:focus {
+    border-color: #4c21b9;
+    box-shadow: 0 0 5px rgba(76, 33, 185, 0.3);
+  }
+  
+  #studentForm button {
+    width: 100%;
+    padding: 12px;
+    background-color: #58585a;
+    color: white;
+    border: none;
+    border-radius: 6px;
+    font-size: 16px;
+    cursor: pointer;
+    transition: 0.3s;
+  }
+  
+  #studentForm button:hover {
+    background-color: #2a2a2b;
+  }
+  
+  /* ======= STUDENT LIST TABLE (container-two) ======= */
+  .container-two {
+    padding: 20px;
+    background-color:  transparent;
+    border-radius: 10px;
+    width: 600px;
+  }
+  .table-wrapper {
+    max-height: 400px; 
+    overflow-y: auto;  
+    overflow-x: hidden;
+  }
+  
+  .container-two h2 {
+    text-align: center;
+    margin-bottom: 10px;
+    color: #0b0b0b;
+  }
+  
+  #studentTable {
+    width: 95%;
+    border-collapse: separate;
+    border-spacing: 0 10px; 
+  }
+  
+  #studentTable th,
+  #studentTable td {
+    border: 2px solid #161616;
+    padding: 10px;
+    height: 20px;
+    /* border-left: none;
+    border-right: none; */
+    text-align: center;
+  }
+  /* First column: only left border */
+#studentTable td:first-child,
+#studentTable th:first-child {
+  border-left: 1px solid #161616;
+  border-right: none;
+}
+
+/* Last column: only right border */
+#studentTable td:last-child,
+#studentTable th:last-child {
+  border-left: none;
+  border-right: 1px solid #161616;
+}
+  #studentTable td:not(:first-child):not(:last-child),
+#studentTable th:not(:first-child):not(:last-child) {
+  border-left: none;
+  border-right: none;
+}
+  #studentTable th {
+    background-color: #ffcece;
+  }
+  
+  #studentTable thead th {
+    position: sticky;
+    top: 0;
+    background-color: #ffcece;
+    z-index: 1;
+  }
+  
+  #studentTable tbody tr:nth-child(even) {
+    background-color: transparent;
+  }
+  
+  /* Responsive design */
+  @media (min-width: 375px) and (max-width: 766px) {
+    /* Yeh styles 375px se badi aur 766px tak ki devices par apply honge */
+    body {
+      overflow: hidden;
+    }
+  
+    header h1 {
+      font-size: 25px;
+    }
+  .main-container {
+      gap: 1rem;
+      margin-top: 0.5rem;
+
+    }
+   .container-one {
+      margin-left:0.5rem;
+      padding: 6px;
+      width: 300px;
+    }
+    .container-one h2 {
+      font-size: 20px;
+      margin-bottom: 6px;
+     }
+    
+    #studentForm div {
+      margin-bottom: 5px;
+    }
+    
+    #studentForm label {
+      margin-bottom: 5px;
+     
+    }
+    
+    #studentForm input {
+      padding: 7px;
+     }
+    
+   
+    #studentForm button {
+      width: 100%;
+      padding: 9px;
+     
+     
+    }
+
+    .container-two {
+      padding: 10px;
+      width: 400px;
+    }
+    .table-wrapper {
+      max-height: 200px; 
+    
+    }
+    
+    .container-two h2 {
+      text-align: center;
+      font-size: 20px;
+      margin-bottom: 10px;
+      color: #0b0b0b;
+    }
+    
+    
+    #studentTable th,
+    #studentTable td {
+     font-size: 14px;
+      padding: 10px;
+      height: 5px;
+      line-height: 1; 
+      
+    }
+  
+  
+  }
+  @media (min-width: 768px) and (max-width: 1024px){
+    header h1 {
+      font-size: 30px;
+    }
+  .main-container {
+      gap: 4rem;
+      margin-top: 5rem;
+
+    }
+   .container-one {
+      margin-left:0.5rem;
+      padding: 15px;
+      width: 400px;
+    }
+    .container-one h2 {
+      font-size: 25px;
+      margin-bottom: 6px;
+     }
+    
+    #studentForm div {
+      margin-bottom: 5px;
+    }
+    
+    #studentForm label {
+      margin-bottom: 5px;
+     
+    }
+    
+    #studentForm input {
+      padding: 10px;
+     }
+    
+   
+    #studentForm button {
+      width: 100%;
+      padding: 10px;
+      margin-top: 5px;
+     
+    }
+
+    .container-two {
+      padding: 10px;
+      width: 500px;
+    }
+    .table-wrapper {
+      max-height: 200px; 
+    
+    }
+    
+    .container-two h2 {
+     
+      font-size: 30px;
+      margin-bottom: 10px;
+     
+    }
+    
+    
+    #studentTable th,
+    #studentTable td {
+     font-size: 18px;
+      padding: 10px;
+      height: 5px;
+      line-height: 1; 
+      
+    }
+  
+
+  }
+ 
+  
+   
